@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -5,12 +6,305 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="profile.png">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-          crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <title>Onur Arıkan</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #132ab6;
+      --accent-color: #e74c3c;
+      --light-color: #f8f9fa;
+      --dark-color: #1a1a2e;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .hero-section h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+    }
+
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .nav-link {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--secondary-color);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 150px 0;
+      margin-top: 76px;
+    }
+
+    .hero-section h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .hero-section .lead {
+      font-size: 1.1rem;
+    }
+
+    .hero-photo {
+      border-radius: 20px;
+      width: 258px;
+      height: 258px;
+      object-fit: cover;
+    }
+
+    .btn-primary {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: #2980b9;
+      border-color: #2980b9;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .bg-light.section-padding {
+      background-color: var(--light-color) !important;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .skills-container {
+      text-align: center;
+    }
+
+    .skill-item {
+      display: inline-flex;
+      align-items: center;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: white;
+      border-radius: 50px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-icon {
+      margin-right: 10px;
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+    }
+
+    .carousel-control-prev {
+      left: -25px;
+    }
+
+    .carousel-control-next {
+      right: -25px;
+    }
+
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+      opacity: 1;
+    }
+
+    .project-card {
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      background: white;
+      margin: 10px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .project-img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 25px;
+    }
+
+    .card-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .card-text {
+      color: #5a6c7d;
+      margin-bottom: 20px;
+    }
+
+    .tech-stack {
+      font-size: 0.85rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .carousel-indicators {
+      bottom: -50px;
+    }
+
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #bdc3c7;
+      margin: 0 5px;
+    }
+
+    .carousel-indicators button.active {
+      background-color: var(--secondary-color);
+    }
+
+    .btn-outline-primary, .btn-outline-secondary {
+      border-radius: 30px;
+      padding: 8px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .btn-outline-secondary {
+      border-color: #95a5a6;
+      color: #7f8c8d;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #95a5a6;
+      color: white;
+    }
+
+    .project-counter {
+      text-align: center;
+      margin-top: 60px;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--secondary-color);
+      color: white;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 30px 0;
+    }
+
+    .contact-info {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -29,91 +323,166 @@
     </div>
   </div>
 </nav>
+
 <section id="home" class="hero-section">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-4 d-flex justify-content-center"><img class="rounded-circle img-fluid"
-                                                               src="profile.png"
-                                                               alt style="width: 258px;"/></div>
+      <div class="col-lg-4 d-flex justify-content-center">
+        <img class="hero-photo img-fluid"
+             src="profile.png"
+             alt="Onur Arıkan"/>
+      </div>
       <div class="col-lg-8">
-        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-warning">Onur Arıkan</span></h1>
+        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span style="color: var(--accent-color)">Onur Arıkan</span></h1>
         <h3 class="mb-4">Software Developer</h3>
         <p class="lead mb-4">I build exceptional and scalable web applications with focus on responsive design, clean
-          code, and user experience.</p><a class="btn btn-light btn-lg" role="button" href="#projects">View My Work</a>
-        <a href="https://blog.onurarikan.dev" class="btn btn-light btn-lg">Check My Blog</a>
+          code, and user experience.</p>
+        <a class="btn btn-light btn-lg me-2" role="button" href="#projects">View My Work</a>
+        <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg">Check My Blog</a>
       </div>
     </div>
   </div>
 </section>
-<section id="about" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2 class="text-center section-title">About Me</h2>
-        <p class="lead">I'm a passionate software developer with 3 years of experience.</p>
-        <p>Most of the time you’ll find me building applications with Python, especially using Django based web
-          applications. I love exploring how different pieces fit together, whether it’s a big project with multiple
-          dependencies, or just some small script that makes life easier. Coding is a big part of what I do, but it’s
-          only one part of the bigger picture.<br/><br/></p>
-        <p>Outside of tech, guitar is my biggest passion. I’m always playing, experimenting with sounds, or coming up
-          with new riffs. I also love Formula 1, stargazing, board games hiking, climbing and travelling. This site is my little
-          corner to share all of that — my projects, my hobbies, and the things that make me curious.</p>
-      </div>
-      <div class="col-lg-6"><img class="rounded img-fluid"
-                                 src="/img/aboutme.jpg"
-                                 alt=""/></div>
-    </div>
-  </div>
-</section>
-<section id="skills" class="bg-light section-padding">
-  <div class="container">
-    <h2 class="text-center section-title">My Skills</h2>
-    <p class="lead text-center mb-5">I work with a range of technologies and tools to create amazing products.</p>
-    <div>
-      <div class="row mb-4">
-        <div class="col-12">
-          <h3 class="mb-3">Tech Stack</h3>
-          <div class="d-flex flex-wrap"><span class="badge bg-primary p-2 me-2 mb-2">Python</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Django</span><span
-              class="badge bg-primary p-2 me-2 mb-2">FastAPI</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Flask</span><span
-              class="badge bg-primary p-2 me-2 mb-2">PostgreSQL</span><span class="badge bg-primary p-2 me-2 mb-2">SQLite</span><span
-              class="badge bg-primary p-2 me-2 mb-2">HTML/CSS</span><span class="badge bg-primary p-2 me-2 mb-2">Bootstrap 5</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Docker</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Git</span><span class="badge bg-primary p-2 me-2 mb-2">Linux</span><span
-              class="badge bg-primary p-2 me-2 mb-2">C/C++</span><span class="badge bg-primary p-2 me-2 mb-2">JavaScript/TypeScript</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Pandas</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Pygame</span></div>
+
+<div class="container mt-5">
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title">About Me</h2>
+          <p class="lead text-center">I'm a passionate software developer with 3 years of experience.</p>
+          <p>Most of the time you'll find me building applications with Python, especially using Django based web
+            applications. I love exploring how different pieces fit together, whether it's a big project with multiple
+            dependencies, or just some small script that makes life easier. Coding is a big part of what I do, but it's
+            only one part of the bigger picture.</p>
+          <p>Outside of tech, guitar is my biggest passion. I'm always playing, experimenting with sounds, or coming up
+            with new riffs. I also love Formula 1, stargazing, board games hiking, climbing and travelling. This site is my little
+            corner to share all of that — my projects, my hobbies, and the things that make me curious.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <h3 class="mb-3">Other Interests</h3>
-          <div class="d-flex flex-wrap"><span class="badge bg-primary p-2 me-2 mb-2">Guitar 🎸</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Formula 1 🏁</span><span class="badge bg-primary p-2 me-2 mb-2">Hiking 🥾</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Climbing 🧗</span><span class="badge bg-primary p-2 me-2 mb-2">Astronomy 🔭</span><span
-              class="badge bg-primary p-2 me-2 mb-2">Board Games 🎲</span><span class="badge bg-primary p-2 me-2 mb-2">Travelling 🌍</span>
+    </div>
+  </section>
+
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <p class="lead text-center mb-5">I work with a range of technologies and tools to create amazing products.</p>
+
+      <div class="skills-container">
+        <h3 class="mb-4">Tech Stack</h3>
+        <div class="mb-5">
+          <div class="skill-item">
+            <i class="fab fa-python skill-icon"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code skill-icon"></i>
+            <span>Django</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-bolt skill-icon"></i>
+            <span>FastAPI</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-flask skill-icon"></i>
+            <span>Flask</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <span>SQLite</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-html5 skill-icon"></i>
+            <span>HTML/CSS</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-bootstrap skill-icon"></i>
+            <span>Bootstrap 5</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-docker skill-icon"></i>
+            <span>Docker</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-git-alt skill-icon"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-linux skill-icon"></i>
+            <span>Linux</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-cogs skill-icon"></i>
+            <span>C/C++</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js-square skill-icon"></i>
+            <span>JavaScript/TypeScript</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-line skill-icon"></i>
+            <span>Pandas</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-gamepad skill-icon"></i>
+            <span>Pygame</span>
+          </div>
+        </div>
+
+        <h3 class="mb-4">Other Interests</h3>
+        <div>
+          <div class="skill-item">
+            <i class="fas fa-guitar skill-icon"></i>
+            <span>Guitar</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-flag-checkered skill-icon"></i>
+            <span>Formula 1</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-hiking skill-icon"></i>
+            <span>Hiking</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-mountain skill-icon"></i>
+            <span>Climbing</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-star skill-icon"></i>
+            <span>Astronomy</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chess skill-icon"></i>
+            <span>Board Games</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-globe-americas skill-icon"></i>
+            <span>Travelling</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="projects" class="section-padding">
-  <div class="container">
-    <h2 class="text-center section-title">My Projects</h2>
-    <p class="lead text-center mb-5">Here are some of my recent works that I'm proud of.</p>
+  </section>
 
-    <!-- Projects Carousel -->
-    <div id="projectsCarousel" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="lead text-center mb-5">Here are some of my recent works that I'm proud of.</p>
 
-      <div class="carousel-inner">
+      <!-- Projects Carousel -->
+      <div id="projectsCarousel" class="carousel slide position-relative">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                  aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+              <div class="carousel-inner">
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="row">
@@ -287,53 +656,61 @@
         </div>
       </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
 
-    <div class="project-counter">
-      <span id="currentSlide">1</span> of <span id="totalSlides">3</span> slides
-    </div>
-  </div>
-</section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-<section id="contact" class="bg-light section-padding">
-  <div class="container">
-    <h2 class="text-center section-title">Get In Touch</h2>
-    <p class="lead text-center mb-5">Feel free to reach out!</p>
-    <div class="row mt-5">
-      <div class="col-md-4 text-center">
-        <div class="mb-3 mx-auto social-icon"><i class="fas fa-envelope"></i></div>
-        <h5>Email</h5>
-        <p>onurarikan.dev@gmail.com</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="mb-3 mx-auto social-icon"><i class="fas fa-phone"></i></div>
-        <h5>Phone</h5>
-        <p></p>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="mb-3 mx-auto social-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <h5>Location</h5>
-        <p>Gdynia, Poland</p>
+      <div class="project-counter">
+        <span id="currentSlide">1</span> of <span id="totalSlides">3</span> slides
       </div>
     </div>
-    <div class="text-center mt-5"><a class="social-icon" href="https://linkedin.com/in/onur93arikan"><i
-        class="fab fa-linkedin-in"></i></a><a class="social-icon" href="https://github.com/opethef10"><i
-        class="fab fa-github"></i></a></div>
-  </div>
-</section>
+  </section>
+
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="lead text-center mb-5">Feel free to reach out!</p>
+      <div class="row mt-5">
+        <div class="col-md-4 text-center">
+          <div class="mb-3 mx-auto social-icon"><i class="fas fa-envelope"></i></div>
+          <h5>Email</h5>
+          <p>onurarikan.dev@gmail.com</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="mb-3 mx-auto social-icon"><i class="fas fa-phone"></i></div>
+          <h5>Phone</h5>
+          <p></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="mb-3 mx-auto social-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Location</h5>
+          <p>Gdynia, Poland</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a class="social-icon" href="https://linkedin.com/in/onur93arikan"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-icon" href="https://github.com/opethef10"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer class="text-center">
   <div class="container">
     <p>2025 Onur Arıkan</p>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
-<script src="script.js"></script>
 </html>
