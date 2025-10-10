@@ -74,25 +74,6 @@
       transform: scale(1.05);
     }
 
-    #projectsCarousel {
-        min-height: 600px;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .carousel-control-prev {
-      left: -25px;
-    }
-
-    .carousel-control-next {
-      right: -25px;
-    }
-
     .social-icon {
       transition: transform 0.3s ease;
     }
@@ -297,18 +278,8 @@
       <h2 class="text-center fw-bold text-dark mb-4 section-title">My Projects</h2>
       <p class="lead text-center text-muted mb-5">Here are some of my recent works that I'm proud of.</p>
 
-      <div id="projectsCarousel" class="carousel slide position-relative">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                  aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
           <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
               <!-- Formula 1 Fantasy League -->
               <div class="col-sm-4">
                 <div class="project-card card h-100 border-0 shadow-sm">
@@ -362,11 +333,9 @@
                 </div>
               </div>
             </div>
-          </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
               <!-- Flagsweeper -->
               <div class="col-sm-4">
                 <div class="project-card card h-100 border-0 shadow-sm">
@@ -420,11 +389,9 @@
                 </div>
               </div>
             </div>
-          </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
               <div class="col-sm-4">
                 <div class="project-card card h-100 border-0 shadow-sm">
                   <img class="project-img card-img-top"
@@ -475,22 +442,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev bg-primary" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next bg-primary" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <!-- <div class="text-center mt-5 text-muted"> -->
-      <!--   <span id="currentSlide">1</span> of <span id="totalSlides">3</span> slides -->
-      <!-- </div> -->
     </div>
   </section>
 
@@ -506,7 +457,7 @@
           <h5 class="fw-semibold">Email</h5>
           <p class="text-muted">onurarikan.dev@gmail.com</p>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 mb-3 text-center">
         <a class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle text-decoration-none me-3 social-icon"
            href="https://linkedin.com/in/onur93arikan" style="width: 40px; height: 40px;">
           <i class="fab fa-linkedin-in"></i>
@@ -524,7 +475,6 @@
           <p class="text-muted">Gdynia, Poland</p>
         </div>
       </div>
-      <div class="text-center mt-5"></div>
     </div>
   </section>
 </div>
