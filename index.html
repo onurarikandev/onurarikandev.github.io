@@ -13,135 +13,41 @@
       --primary-color: #2c3e50;
       --secondary-color: #132ab6;
       --accent-color: #e74c3c;
-      --light-color: #f8f9fa;
-      --dark-color: #1a1a2e;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: #333;
       scroll-behavior: smooth;
-      background-color: #f9f9f9;
-      line-height: 1.6;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
+    .text-justify {
+      text-align: justify;
     }
 
     .hero-section h1 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-    }
-
-    .navbar {
-      background-color: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px 0;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-
-    .nav-link {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: var(--secondary-color);
-    }
-
-    .hero-section {
-      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
-      color: white;
-      padding: 150px 0;
-      margin-top: 76px;
-    }
-
-    .hero-section h3 {
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-
-    .hero-section .lead {
-      font-size: 1.1rem;
-    }
-
-    .hero-photo {
-      border-radius: 20px;
-      width: 258px;
-      height: 258px;
-      object-fit: cover;
-    }
-
-    .btn-primary {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-    }
-
-    .btn-primary:hover {
-      background-color: #2980b9;
-      border-color: #2980b9;
-    }
-
-    .btn-outline-primary {
-      border-color: var(--secondary-color);
-      color: var(--secondary-color);
-    }
-
-    .btn-outline-primary:hover {
-      background-color: var(--secondary-color);
-      color: white;
     }
 
     .section-padding {
       padding: 80px 0;
-      background-color: white;
+    }
+
+    .shadow-section {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      margin-bottom: 30px;
       border-radius: 10px;
-    }
-
-    .bg-light.section-padding {
-      background-color: var(--light-color) !important;
-    }
-
-    .section-title {
-      position: relative;
-      margin-bottom: 40px;
-      font-weight: 700;
-      color: var(--primary-color);
-      text-align: center;
     }
 
     .section-title::after {
       content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -10px;
+      display: block;
       width: 80px;
       height: 4px;
       background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
       border-radius: 2px;
-    }
-
-    .skills-container {
-      text-align: center;
+      margin: 15px auto;
     }
 
     .skill-item {
-      display: inline-flex;
-      align-items: center;
-      margin: 10px;
-      padding: 12px 20px;
-      background-color: white;
-      border-radius: 50px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease;
     }
 
@@ -149,20 +55,34 @@
       transform: translateY(-5px);
     }
 
-    .skill-icon {
-      margin-right: 10px;
-      color: var(--secondary-color);
-      font-size: 1.2rem;
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-img {
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    #projectsCarousel {
+        min-height: 600px;
+    }
     .carousel-control-prev, .carousel-control-next {
       width: 50px;
       height: 50px;
-      background-color: var(--secondary-color);
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
-      opacity: 0.9;
     }
 
     .carousel-control-prev {
@@ -173,189 +93,93 @@
       right: -25px;
     }
 
-    .carousel-control-prev:hover, .carousel-control-next:hover {
-      opacity: 1;
-    }
-
-    .project-card {
-      height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: none;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      background: white;
-      margin: 10px;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
-
-    .project-img {
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .project-card:hover .project-img {
-      transform: scale(1.05);
-    }
-
-    .card-body {
-      padding: 25px;
-    }
-
-    .card-title {
-      color: var(--primary-color);
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-    .card-text {
-      color: #5a6c7d;
-      margin-bottom: 20px;
-    }
-
-    .tech-stack {
-      font-size: 0.85rem;
-      color: #7f8c8d;
-      margin-bottom: 20px;
-    }
-
-    .carousel-indicators {
-      bottom: -50px;
-    }
-
-    .carousel-indicators button {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #bdc3c7;
-      margin: 0 5px;
-    }
-
-    .carousel-indicators button.active {
-      background-color: var(--secondary-color);
-    }
-
-    .btn-outline-primary, .btn-outline-secondary {
-      border-radius: 30px;
-      padding: 8px 20px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline-primary {
-      border-color: var(--secondary-color);
-      color: var(--secondary-color);
-    }
-
-    .btn-outline-primary:hover {
-      background-color: var(--secondary-color);
-      color: white;
-    }
-
-    .btn-outline-secondary {
-      border-color: #95a5a6;
-      color: #7f8c8d;
-    }
-
-    .btn-outline-secondary:hover {
-      background-color: #95a5a6;
-      color: white;
-    }
-
-    .project-counter {
-      text-align: center;
-      margin-top: 60px;
-      color: #7f8c8d;
-      font-size: 0.9rem;
-    }
-
     .social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--secondary-color);
-      color: white;
-      margin-right: 10px;
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .social-icon:hover {
-      background: var(--primary-color);
-      transform: translateY(-3px);
+      transform: scale(1.2);
+    }
+    .card-body {
+      min-height: 400px;
     }
 
-    footer {
-      background: var(--dark-color);
-      color: white;
-      padding: 30px 0;
-    }
-
-    .contact-info {
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* Ensure hero section takes full viewport height minus navbar */
+    .hero-section {
+      min-height: calc(100vh - 76px);
     }
   </style>
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg fixed-top navbar-light">
-  <div class="container"><a class="navbar-brand" href="#">Onur Arıkan</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button"><span
-        class="navbar-toggler-icon"></span></button>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
+  <div class="container-lg">
+    <a class="navbar-brand fw-bold text-dark" href="#">Onur Arıkan</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div id="navbarNav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section id="home" class="hero-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 d-flex justify-content-center">
-        <img class="hero-photo img-fluid"
-             src="profile.png"
-             alt="Onur Arıkan"/>
-      </div>
-      <div class="col-lg-8">
-        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span style="color: var(--accent-color)">Onur Arıkan</span></h1>
-        <h3 class="mb-4">Software Developer</h3>
-        <p class="lead mb-4">I build exceptional and scalable web applications with focus on responsive design, clean
-          code, and user experience.</p>
-        <a class="btn btn-light btn-lg me-2" role="button" href="#projects">View My Work</a>
-        <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg">Check My Blog</a>
+<!-- Hero Section - Full width and properly spaced -->
+<section id="home" class="hero-section vh-100 d-flex align-items-center bg-dark text-white">
+  <div class="container-fluid">
+    <div class="container-lg">
+      <div class="row align-items-center">
+
+        <!-- Profile Image -->
+        <div class="col-12 col-lg-4 d-flex justify-content-center mb-3 mb-lg-0">
+          <img class="rounded-3 img-fluid"
+               src="profile.png"
+               alt="Onur Arıkan"
+               style="width: 250px; height: 250px; object-fit: cover;"
+               class="d-block mx-auto mx-lg-0">
+        </div>
+
+        <!-- Text Content -->
+        <div class="col-12 col-lg-7 text-center text-lg-start">
+          <h1 class="display-5 display-lg-3 fw-black mb-2 mb-lg-3">
+            Hi, I'm <span style="color: var(--accent-color)">Onur Arıkan</span>
+          </h1>
+          <h3 class="mb-3 mb-lg-4 fw-medium fs-5 fs-lg-3">Software Developer</h3>
+          <p class="lead mb-3 mb-lg-4 fs-6 fs-lg-5 me-5">
+            I build exceptional and scalable web applications with focus on responsive design, clean
+            code, and user experience.
+          </p>
+
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 gap-lg-3">
+            <a class="btn btn-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium" role="button" href="#projects">View My Work</a>
+            <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium">Check My Blog</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<div class="container mt-5">
-  <section id="about" class="section-padding">
-    <div class="container">
+
+<div class="container-lg mt-5">
+  <section id="about" class="section-padding bg-white shadow-section mb-5">
+    <div class="container-lg">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="section-title">About Me</h2>
-          <p class="lead text-center">I'm a passionate software developer with 3 years of experience.</p>
-          <p>Most of the time you'll find me building applications with Python, especially using Django based web
+        <div class="col-md-10 mx-auto">
+          <h2 class="text-center fw-bold text-dark mb-4 section-title">About Me</h2>
+          <p class="lead text-center text-muted mb-4">I'm a passionate software developer with 3 years of experience.</p>
+          <p class="text-dark text-justify">Most of the time you'll find me building applications with Python, especially using Django based web
             applications. I love exploring how different pieces fit together, whether it's a big project with multiple
             dependencies, or just some small script that makes life easier. Coding is a big part of what I do, but it's
             only one part of the bigger picture.</p>
-          <p>Outside of tech, guitar is my biggest passion. I'm always playing, experimenting with sounds, or coming up
+          <p class="text-dark text-justify">Outside of tech, guitar is my biggest passion. I'm always playing, experimenting with sounds, or coming up
             with new riffs. I also love Formula 1, stargazing, board games hiking, climbing and travelling. This site is my little
             corner to share all of that — my projects, my hobbies, and the things that make me curious.</p>
         </div>
@@ -363,104 +187,104 @@
     </div>
   </section>
 
-  <section id="skills" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">My Skills</h2>
-      <p class="lead text-center mb-5">I work with a range of technologies and tools to create amazing products.</p>
+  <section id="skills" class="section-padding bg-white shadow-section mb-5">
+    <div class="container-lg">
+      <h2 class="text-center fw-bold text-dark mb-4 section-title">My Skills</h2>
+      <p class="lead text-center text-muted mb-5">I work with a range of technologies and tools to create amazing products.</p>
 
-      <div class="skills-container">
-        <h3 class="mb-4">Tech Stack</h3>
+      <div class="text-center">
+        <h3 class="mb-4 fw-semibold">Tech Stack</h3>
         <div class="mb-5">
-          <div class="skill-item">
-            <i class="fab fa-python skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-python text-primary me-2 fs-5"></i>
             <span>Python</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-code skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-code text-primary me-2 fs-5"></i>
             <span>Django</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-bolt skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-bolt text-primary me-2 fs-5"></i>
             <span>FastAPI</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-flask skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-flask text-primary me-2 fs-5"></i>
             <span>Flask</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-database skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-database text-primary me-2 fs-5"></i>
             <span>PostgreSQL</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-database skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-database text-primary me-2 fs-5"></i>
             <span>SQLite</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-html5 skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-html5 text-primary me-2 fs-5"></i>
             <span>HTML/CSS</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-bootstrap skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-bootstrap text-primary me-2 fs-5"></i>
             <span>Bootstrap 5</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-docker skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-docker text-primary me-2 fs-5"></i>
             <span>Docker</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-git-alt skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-git-alt text-primary me-2 fs-5"></i>
             <span>Git</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-linux skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-linux text-primary me-2 fs-5"></i>
             <span>Linux</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-cogs skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-cogs text-primary me-2 fs-5"></i>
             <span>C/C++</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-js-square skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fab fa-js-square text-primary me-2 fs-5"></i>
             <span>JavaScript/TypeScript</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-chart-line skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-chart-line text-primary me-2 fs-5"></i>
             <span>Pandas</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-gamepad skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-gamepad text-primary me-2 fs-5"></i>
             <span>Pygame</span>
           </div>
         </div>
 
-        <h3 class="mb-4">Other Interests</h3>
+        <h3 class="mb-4 fw-semibold">Other Interests</h3>
         <div>
-          <div class="skill-item">
-            <i class="fas fa-guitar skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-guitar text-primary me-2 fs-5"></i>
             <span>Guitar</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-flag-checkered skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-flag-checkered text-primary me-2 fs-5"></i>
             <span>Formula 1</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-hiking skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-hiking text-primary me-2 fs-5"></i>
             <span>Hiking</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-mountain skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-mountain text-primary me-2 fs-5"></i>
             <span>Climbing</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-star skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-star text-primary me-2 fs-5"></i>
             <span>Astronomy</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-chess skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-chess text-primary me-2 fs-5"></i>
             <span>Board Games</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-globe-americas skill-icon"></i>
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+            <i class="fas fa-globe-americas text-primary me-2 fs-5"></i>
             <span>Travelling</span>
           </div>
         </div>
@@ -468,12 +292,11 @@
     </div>
   </section>
 
-  <section id="projects" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <p class="lead text-center mb-5">Here are some of my recent works that I'm proud of.</p>
+  <section id="projects" class="section-padding bg-white shadow-section mb-5">
+    <div class="container-lg">
+      <h2 class="text-center fw-bold text-dark mb-4 section-title">My Projects</h2>
+      <p class="lead text-center text-muted mb-5">Here are some of my recent works that I'm proud of.</p>
 
-      <!-- Projects Carousel -->
       <div id="projectsCarousel" class="carousel slide position-relative">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -482,235 +305,238 @@
           <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
-              <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row">
-            <!-- Formula 1 Fantasy League -->
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src="https://formula1turkiye.pythonanywhere.com/static/img/f1t_banner.jpg"
-                     alt="Formula 1 Fantasy League"/>
-                <div class="card-body">
-                  <h5 class="card-title">Formula 1 Türkiye</h5>
-                  <p class="card-text">Homepage for the biggest Formula 1 community in Turkey. Contains all the historical
-                    Formula 1 data, graphs and statistics. Features an online fantasy league and prediction game
-                    which requires budget management and strategy skills, first and only one in Turkey, played by hundreds of people.</p>
-                  <p class="tech-stack"><small>Python, Django, Bootstrap 5, SQLite3</small></p>
-                  <a class="btn btn-outline-primary btn-sm" href="https://formula1turkiye.pythonanywhere.com">View Site</a>
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <!-- Formula 1 Fantasy League -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="https://formula1turkiye.pythonanywhere.com/static/img/f1t_banner.jpg"
+                       alt="Formula 1 Fantasy League"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Formula 1 Türkiye</h5>
+                    <p class="tech-stack text-muted small"><small>Python, Django, Bootstrap 5, SQLite3</small></p>
+                    <p class="card-text text-justify">Homepage for the biggest F1 community in Turkey. Contains all the historical
+                      F1 data, graphs and statistics. Features an online fantasy league and prediction game
+                      which requires budget management and strategy skills, first and only one in Turkey, played by hundreds of people.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://formula1turkiye.pythonanywhere.com">View Site</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
               <!-- Blog Card -->
-              <div class="col-md-4">
-                  <div class="project-card">
-                      <img class="project-img card-img-top"
-                           src="https://media.licdn.com/dms/image/v2/D4D16AQE_nmuG1ltwvQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1669388007596?e=1762387200&v=beta&t=nYkILXcRQ6-mVbNrVxqst_slFZmLZzbupU3ik9AP9II"
-                           alt="Coding Blog"/>
-                      <div class="card-body">
-                          <h5 class="card-title">Coding Blog</h5>
-                          <p class="card-text">In this web page, I share my personal journey in Computer Science as well
-                              as the handy tips that make my life easier while using the web, command line applications
-                              or generally everything that I can explore in my computer.</p>
-                          <p class="tech-stack"><small>Jekyll, GitHub Pages, Markdown</small></p>
-                          <a class="btn btn-outline-primary btn-sm" href="https://blog.onurarikan.dev">Visit Blog</a>
-                          <a class="btn btn-outline-secondary btn-sm"
-                             href="https://github.com/opethef10/opethef10.github.io">GitHub</a>
-                      </div>
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="https://media.licdn.com/dms/image/v2/D4D16AQE_nmuG1ltwvQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1669388007596?e=1762387200&v=beta&t=nYkILXcRQ6-mVbNrVxqst_slFZmLZzbupU3ik9AP9II"
+                       alt="Coding Blog"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Coding Blog</h5>
+                    <p class="tech-stack text-muted small"><small>Jekyll, GitHub Pages, Markdown</small></p>
+                    <p class="card-text text-justify">In this web page, I share my personal journey in Computer Science as well
+                      as the handy tips that make my life easier while using the web, command line applications
+                      or generally everything that I can explore in my computer.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://blog.onurarikan.dev">Visit Blog</a>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill"
+                       href="https://github.com/opethef10/opethef10.github.io">GitHub</a>
                   </div>
+                </div>
               </div>
-            <!-- Splendid -->
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src="/img/splendid.png"
-                     alt="Splendid Board Game"/>
-                <div class="card-body">
-                  <h5 class="card-title">Splendid</h5>
-                    <p class="card-text">Intelligent design system for the board game Splendor, a web application that
+
+              <!-- Splendid -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/splendid.png"
+                       alt="Splendid Board Game"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Splendid</h5>
+                    <p class="tech-stack text-muted small"><small>Python, Django, Channels, WebSockets, PostgreSQL</small></p>
+                    <p class="card-text text-justify">Intelligent design system for the board game Splendor, a web application that
                       can be played as multiplayer or against AI in real time with robust authentication and Elo rating
                       system.</p>
-                    <p class="tech-stack"><small>Python, Django, Channels, WebSockets, PostgreSQL, Elo Rating System</small></p>
-                    <a class="btn btn-outline-primary btn-sm" href="https://splendid.onurarikan.dev">View Project</a>
-                    <!-- <a class="btn btn-outline-secondary btn-sm" href="#">GitHub</a> -->
-                </div>
-              </div>
-            </div>
-
-        </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row">
-              <!-- Flagsweeper -->
-              <div class="col-md-4">
-                  <div class="project-card">
-                      <img class="project-img card-img-top"
-                           src="https://github.com/opethef10/Flagsweeper/raw/main/resources/screenshot.png"
-                           alt="Flagsweeper Game"/>
-                      <div class="card-body">
-                          <h5 class="card-title">Flagsweeper</h5>
-                          <p class="card-text">Multiplayer version of the classic Minesweeper game, written in PyGame with
-                              enhanced gameplay features and real-time multiplayer functionality.</p>
-                          <p class="tech-stack"><small>PyGame, Python, Multiplayer Gaming</small></p>
-                          <a class="btn btn-outline-primary btn-sm" href="https://github.com/opethef10/Flagsweeper">View
-                              Project</a>
-                          <a class="btn btn-outline-secondary btn-sm" href="https://github.com/opethef10/Flagsweeper">GitHub</a>
-                      </div>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://splendid.onurarikan.dev">View Project</a>
                   </div>
-              </div>
-            <!-- Solar System Plotter -->
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src="/img/solar.png"
-                     alt="Solar System Plotter"/>
-                <div class="card-body">
-                  <h5 class="card-title">Solar System Plotter</h5>
-                  <p class="card-text">A web app that plots the solar system with given parameters, in
-                    heliocentric or geocentric view with an option to generate animated GIFs showing planetary movements
-                    over time.</p>
-                  <p class="tech-stack"><small>Python, Flask, PyEphem, Animation</small></p>
-                  <a class="btn btn-outline-primary btn-sm" href="https://solar.onurarikan.dev">View Project</a>
-                  <a class="btn btn-outline-secondary btn-sm" href="https://github.com/opethef10/solar_system_plotter">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Syllabify-Turkish -->
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src="/img/syllabify.png"
-                     alt="Syllabify Turkish"/>
-                <div class="card-body">
-                  <h5 class="card-title">Syllabify-Turkish</h5>
-                  <p class="card-text">A JavaScript program that divides Turkish sentences into their syllables, useful
-                    for linguistic analysis and language learning applications.</p>
-                  <p class="tech-stack"><small>JavaScript, Linguistics, Turkish Language Processing</small></p>
-                  <a class="btn btn-outline-primary btn-sm" href="https://syllabify.onurarikan.dev">View Project</a>
-                  <a class="btn btn-outline-secondary btn-sm" href="https://github.com/opethef10/Syllabify-Turkish">GitHub</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src=""
-                     alt="Habit Tracker"/>
-                <div class="card-body">
-                  <h5 class="card-title">Habit Tracker</h5>
-                  <p class="card-text">A simple habit tracker that helps users track their habits and visualize progress
-                    over time with intuitive charts and statistics.</p>
-                  <p class="tech-stack"><small>Python, Data Visualization, Productivity</small></p>
-                  <a class="btn btn-outline-secondary btn-sm"
-                     href="https://github.com/opethef10/habit_tracker">GitHub</a>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <!-- Flagsweeper -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="https://github.com/opethef10/Flagsweeper/raw/main/resources/screenshot.png"
+                       alt="Flagsweeper Game"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Flagsweeper</h5>
+                    <p class="tech-stack text-muted small"><small>PyGame, Python, Multiplayer Gaming</small></p>
+                    <p class="card-text text-justify">Multiplayer version of the classic Minesweeper game, written in PyGame with
+                      enhanced gameplay features and real-time multiplayer functionality.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://github.com/opethef10/Flagsweeper">View
+                      Project</a>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/Flagsweeper">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Solar System Plotter -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/solar.png"
+                       alt="Solar System Plotter"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Solar System Plotter</h5>
+                    <p class="tech-stack text-muted small"><small>Python, Flask, PyEphem, Animation</small></p>
+                    <p class="card-text text-justify">A web app that plots the solar system with given parameters, in
+                      heliocentric or geocentric view with an option to generate animated GIFs showing planetary movements
+                      over time.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://solar.onurarikan.dev">View Project</a>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/solar_system_plotter">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Syllabify-Turkish -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/syllabify.png"
+                       alt="Syllabify Turkish"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Syllabify-Turkish</h5>
+                    <p class="tech-stack text-muted small"><small>JavaScript, Linguistics, Turkish Language Processing</small></p>
+                    <p class="card-text text-justify">A JavaScript program that divides Turkish sentences into their syllables, useful
+                      for linguistic analysis and language learning applications.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://syllabify.onurarikan.dev">View Project</a>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/Syllabify-Turkish">GitHub</a>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- formula1_elo -->
-
-            <div class="col-md-4">
-              <div class="project-card">
-                <img class="project-img card-img-top"
-                     src=""
-                     alt="Formula 1 Elo"/>
-                <div class="card-body">
-                  <h5 class="card-title">Formula 1 Elo Rankings</h5>
-                  <p class="card-text">Ranks Formula 1 drivers using the Elo scoring system to objectively determine the
-                    fastest drivers based on race performance.</p>
-                  <p class="tech-stack"><small>Python, Elo Rating System, Data Analysis</small></p>
-                  <a class="btn btn-outline-primary btn-sm" href="https://formula1turkiye.pythonanywhere.com/pages/elo/#en">View
-                    Project</a>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/habits.png"
+                       alt="Habit Tracker"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Habit Tracker</h5>
+                    <p class="tech-stack text-muted small"><small>Python, Data Visualization, Productivity</small></p>
+                    <p class="card-text text-justify">A simple habit tracker that helps users track their habits and visualize progress
+                      over time with intuitive charts and statistics.</p>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill"
+                       href="https://github.com/opethef10/habit_tracker">GitHub</a>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              <!-- formula1_elo -->
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/f1_elo.png"
+                       alt="Formula 1 Elo"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Formula 1 Elo Rankings</h5>
+                    <p class="tech-stack text-muted small"><small>Python, Elo Rating System, Data Analysis</small></p>
+                    <p class="card-text text-justify">Ranks Formula 1 drivers using the Elo scoring system to objectively determine the
+                      fastest drivers based on race performance.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://formula1turkiye.pythonanywhere.com/pages/elo/#en">View
+                      Project</a>
+                  </div>
+                </div>
+              </div>
 
               <!-- Elo Rating Calculator -->
-              <div class="col-md-4">
-                  <div class="project-card">
-                      <img class="project-img card-img-top"
-                           src="/img/elo.png"
-                           alt="Elo Rating Calculator"/>
-                      <div class="card-body">
-                          <h5 class="card-title">Elo Rating Calculator</h5>
-                          <p class="card-text">Calculates Elo rating adjustments for two players based on their current ratings
-                              and match outcomes, with customizable parameters.</p>
-                          <p class="tech-stack"><small>JavaScript, Elo Algorithm, Rating System</small></p>
-                          <a class="btn btn-outline-primary btn-sm" href="https://elo.onurarikan.dev">View Project</a>
-                          <a class="btn btn-outline-secondary btn-sm" href="https://github.com/opethef10/elo_calculator/">GitHub</a>
-                      </div>
+              <div class="col-sm-4">
+                <div class="project-card card h-100 border-0 shadow-sm">
+                  <img class="project-img card-img-top"
+                       src="/img/elo.png"
+                       alt="Elo Rating Calculator"/>
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold text-dark">Elo Rating Calculator</h5>
+                    <p class="tech-stack text-muted small"><small>JavaScript, Elo Algorithm, Rating System</small></p>
+                    <p class="card-text text-justify">Calculates Elo rating adjustments for two players based on their current ratings
+                      and match outcomes, with customizable parameters.</p>
+                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://elo.onurarikan.dev">View Project</a>
+                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/elo_calculator/">GitHub</a>
                   </div>
+                </div>
               </div>
+            </div>
           </div>
         </div>
-      </div>
 
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev bg-primary" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+        <button class="carousel-control-next bg-primary" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
 
-      <div class="project-counter">
-        <span id="currentSlide">1</span> of <span id="totalSlides">3</span> slides
-      </div>
+      <!-- <div class="text-center mt-5 text-muted"> -->
+      <!--   <span id="currentSlide">1</span> of <span id="totalSlides">3</span> slides -->
+      <!-- </div> -->
     </div>
   </section>
 
-  <section id="contact" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="lead text-center mb-5">Feel free to reach out!</p>
+  <section id="contact" class="section-padding bg-white shadow-section mb-5">
+    <div class="container-lg">
+      <h2 class="text-center fw-bold text-dark mb-4 section-title">Get In Touch</h2>
+      <p class="lead text-center text-muted mb-5">Feel free to reach out!</p>
       <div class="row mt-5">
-        <div class="col-md-4 text-center">
-          <div class="mb-3 mx-auto social-icon"><i class="fas fa-envelope"></i></div>
-          <h5>Email</h5>
-          <p>onurarikan.dev@gmail.com</p>
+        <div class="col-sm-4 text-center">
+          <div class="mb-3 mx-auto d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 40px; height: 40px;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h5 class="fw-semibold">Email</h5>
+          <p class="text-muted">onurarikan.dev@gmail.com</p>
         </div>
-        <div class="col-md-4 text-center">
-          <div class="mb-3 mx-auto social-icon"><i class="fas fa-phone"></i></div>
-          <h5>Phone</h5>
-          <p></p>
+        <div class="col-sm-4 text-center">
+        <a class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle text-decoration-none me-3 social-icon"
+           href="https://linkedin.com/in/onur93arikan" style="width: 40px; height: 40px;">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle text-decoration-none social-icon"
+           href="https://github.com/opethef10" style="width: 40px; height: 40px;">
+          <i class="fab fa-github"></i>
+        </a>
         </div>
-        <div class="col-md-4 text-center">
-          <div class="mb-3 mx-auto social-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <h5>Location</h5>
-          <p>Gdynia, Poland</p>
+        <div class="col-sm-4 text-center">
+          <div class="mb-3 mx-auto d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 40px; height: 40px;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h5 class="fw-semibold">Location</h5>
+          <p class="text-muted">Gdynia, Poland</p>
         </div>
       </div>
-      <div class="text-center mt-5">
-        <a class="social-icon" href="https://linkedin.com/in/onur93arikan"><i class="fab fa-linkedin-in"></i></a>
-        <a class="social-icon" href="https://github.com/opethef10"><i class="fab fa-github"></i></a>
-      </div>
+      <div class="text-center mt-5"></div>
     </div>
   </section>
 </div>
 
-<footer class="text-center">
-  <div class="container">
-    <p>2025 Onur Arıkan</p>
+<footer class="text-center bg-dark text-white py-4">
+  <div class="container-lg">
+    <p class="mb-0">2025 Onur Arıkan</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
 </body>
 </html>
