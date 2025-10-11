@@ -12,20 +12,20 @@
   <title>Onur Arıkan</title>
 </head>
 
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
+<body class="bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-dark shadow-lg">
   <div class="container-lg">
-    <a class="navbar-brand fw-bold text-dark" href="#">Onur Arıkan</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button">
+    <a class="navbar-brand fw-bold text-light" href="#">Onur Arıkan</a>
+    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="navbarNav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-dark" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -34,12 +34,12 @@
 <!-- Hero Section - Full width and properly spaced -->
 <section id="home" class="hero-section vh-100 d-flex align-items-center bg-dark text-white">
   <div class="container-fluid">
-    <div class="container-lg">
+    <div class="hero-container-padding container-lg shadow-lg rounded-4 bg-dark bg-gradient">
       <div class="row align-items-center">
 
         <!-- Profile Image -->
         <div class="col-12 col-lg-4 d-flex justify-content-center mb-3 mb-lg-0">
-          <img class="rounded-3 img-fluid"
+          <img class="rounded-4 img-fluid"
                src="profile.png"
                alt="Onur Arıkan"
                style="width: 250px; height: 250px; object-fit: cover;"
@@ -49,17 +49,17 @@
         <!-- Text Content -->
         <div class="col-12 col-lg-7 text-center text-lg-start">
           <h1 class="display-5 display-lg-3 fw-black mb-2 mb-lg-3">
-            Hi, I'm <span style="color: var(--accent-color)">Onur Arıkan</span>
+            Hi, I'm <span class="text-primary">Onur Arıkan</span>
           </h1>
           <h3 class="mb-3 mb-lg-4 fw-medium fs-5 fs-lg-3">Software Developer</h3>
-          <p class="lead mb-3 mb-lg-4 fs-6 fs-lg-5 me-5">
+          <p class="lead mb-3 mb-lg-4 fs-6 fs-lg-5 mx-auto">
             I build exceptional and scalable web applications with focus on responsive design, clean
             code, and user experience.
           </p>
 
           <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 gap-lg-3">
-            <a class="btn btn-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium" role="button" href="#projects">View My Work</a>
-            <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium">Check My Blog</a>
+            <a class="btn btn-primary btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium rounded-4" role="button" href="#projects">View My Work</a>
+            <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium rounded-4">Check My Blog</a>
           </div>
         </div>
 
@@ -70,7 +70,7 @@
 
 
 <div class="container-lg mt-5">
-  <section id="about" class="section-padding bg-white shadow-section mb-5">
+  <section id="about" class="section-padding shadow-inset bg-white rounded-4 mb-5">
     <div class="container-lg">
       <div class="row">
         <div class="col-md-10 mx-auto">
@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <section id="skills" class="section-padding bg-white shadow-section mb-5">
+  <section id="skills" class="section-padding shadow-inset bg-white rounded-4 mb-5">
     <div class="container-lg">
       <h2 class="text-center fw-bold text-dark mb-4 section-title">My Skills</h2>
       <p class="lead text-center text-muted mb-5">I work with a range of technologies and tools to create amazing products.</p>
@@ -96,63 +96,63 @@
       <div class="text-center">
         <h3 class="mb-4 fw-semibold">Tech Stack</h3>
         <div class="mb-5">
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-python text-primary me-2 fs-5"></i>
             <span>Python</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-code text-primary me-2 fs-5"></i>
             <span>Django</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-bolt text-primary me-2 fs-5"></i>
             <span>FastAPI</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-flask text-primary me-2 fs-5"></i>
             <span>Flask</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-database text-primary me-2 fs-5"></i>
             <span>PostgreSQL</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-database text-primary me-2 fs-5"></i>
             <span>SQLite</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-html5 text-primary me-2 fs-5"></i>
             <span>HTML/CSS</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-bootstrap text-primary me-2 fs-5"></i>
             <span>Bootstrap 5</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-docker text-primary me-2 fs-5"></i>
             <span>Docker</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-git-alt text-primary me-2 fs-5"></i>
             <span>Git</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-linux text-primary me-2 fs-5"></i>
             <span>Linux</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-cogs text-primary me-2 fs-5"></i>
             <span>C/C++</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fab fa-js-square text-primary me-2 fs-5"></i>
             <span>JavaScript/TypeScript</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-chart-line text-primary me-2 fs-5"></i>
             <span>Pandas</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-gamepad text-primary me-2 fs-5"></i>
             <span>Pygame</span>
           </div>
@@ -160,31 +160,31 @@
 
         <h3 class="mb-4 fw-semibold">Other Interests</h3>
         <div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-guitar text-primary me-2 fs-5"></i>
             <span>Guitar</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-flag-checkered text-primary me-2 fs-5"></i>
             <span>Formula 1</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-hiking text-primary me-2 fs-5"></i>
             <span>Hiking</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-mountain text-primary me-2 fs-5"></i>
             <span>Climbing</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-star text-primary me-2 fs-5"></i>
             <span>Astronomy</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-chess text-primary me-2 fs-5"></i>
             <span>Board Games</span>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow-sm">
+          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
             <i class="fas fa-globe-americas text-primary me-2 fs-5"></i>
             <span>Travelling</span>
           </div>
@@ -193,16 +193,16 @@
     </div>
   </section>
 
-  <section id="projects" class="section-padding bg-white shadow-section mb-5">
+  <section id="projects" class="section-padding shadow-inset bg-white rounded-4 mb-5">
     <div class="container-lg">
       <h2 class="text-center fw-bold text-dark mb-4 section-title">My Projects</h2>
       <p class="lead text-center text-muted mb-5">Here are some of my recent works that I'm proud of.</p>
 
           <!-- Slide 1 -->
-            <div class="row justify-content-center mb-4">
+            <div class="row justify-content-center px-3">
               <!-- Formula 1 Fantasy League -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="https://formula1turkiye.pythonanywhere.com/static/img/f1t_banner.jpg"
                        alt="Formula 1 Fantasy League"/>
@@ -218,8 +218,8 @@
               </div>
 
               <!-- Blog Card -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="https://media.licdn.com/dms/image/v2/D4D16AQE_nmuG1ltwvQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1669388007596?e=1762387200&v=beta&t=nYkILXcRQ6-mVbNrVxqst_slFZmLZzbupU3ik9AP9II"
                        alt="Coding Blog"/>
@@ -237,8 +237,8 @@
               </div>
 
               <!-- Splendid -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/splendid.png"
                        alt="Splendid Board Game"/>
@@ -255,10 +255,10 @@
             </div>
 
           <!-- Slide 2 -->
-            <div class="row justify-content-center mb-4">
+            <div class="row justify-content-center px-3">
               <!-- Flagsweeper -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="https://github.com/opethef10/Flagsweeper/raw/main/resources/screenshot.png"
                        alt="Flagsweeper Game"/>
@@ -273,8 +273,8 @@
               </div>
 
               <!-- Solar System Plotter -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/solar.png"
                        alt="Solar System Plotter"/>
@@ -291,8 +291,8 @@
               </div>
 
               <!-- Syllabify-Turkish -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/syllabify.png"
                        alt="Syllabify Turkish"/>
@@ -309,9 +309,9 @@
             </div>
 
           <!-- Slide 3 -->
-            <div class="row justify-content-center mb-4">
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+            <div class="row justify-content-center px-3">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/habits.png"
                        alt="Habit Tracker"/>
@@ -327,8 +327,8 @@
               </div>
 
               <!-- formula1_elo -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/f1_elo.png"
                        alt="Formula 1 Elo"/>
@@ -344,8 +344,8 @@
               </div>
 
               <!-- Elo Rating Calculator -->
-              <div class="col-sm-4">
-                <div class="project-card card h-100 border-0 shadow-sm">
+              <div class="col-sm-4 mb-4">
+                <div class="project-card card h-100 border-0 rounded-4 shadow">
                   <img class="project-img card-img-top"
                        src="/img/elo.png"
                        alt="Elo Rating Calculator"/>
@@ -363,7 +363,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section-padding bg-white shadow-section mb-5">
+  <section id="contact" class="section-padding shadow-inset bg-white rounded-4 mb-5">
     <div class="container-lg">
       <h2 class="text-center fw-bold text-dark mb-4 section-title">Get In Touch</h2>
       <p class="lead text-center text-muted mb-5">Feel free to reach out!</p>
@@ -397,7 +397,7 @@
   </section>
 </div>
 
-<footer class="text-center bg-dark text-white py-4">
+<footer class="text-center bg-dark text-white pb-5">
   <div class="container-lg">
     <p class="mb-0">2025 Onur Arıkan</p>
   </div>
