@@ -27,6 +27,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
   <div class="container-lg">
     <a class="navbar-brand" href="#home">Onur Arıkan</a>
+    <button id="themeToggle" class="theme-toggle ms-auto" type="button" aria-label="Switch theme"><i class="fas fa-sun"></i></button>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +38,6 @@
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item"><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme"><i class="fas fa-sun"></i></button></li>
       </ul>
     </div>
   </div>
@@ -287,37 +287,29 @@
     </div>
   </section>
 
-  <section id="contact" class="panel">
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="section-sub">Feel free to reach out!</p>
-    <div class="row g-4 align-items-start">
-      <div class="col-sm-4 text-center">
-        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-        <h5>Email</h5>
-        <p class="contact-text">contact@onurarikan.dev</p>
-      </div>
-      <div class="col-sm-4 text-center">
-        <div class="d-flex justify-content-center gap-3">
-          <a class="contact-icon social-icon" href="https://linkedin.com/in/onur93arikan" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a class="contact-icon social-icon" href="https://github.com/opethef10" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 text-center">
-        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <h5>Location</h5>
-        <p class="contact-text">Gdynia, Poland</p>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer class="site-footer text-center">
-  <div class="container-lg">
-    <p class="mb-0">2026 Onur Arıkan</p>
+<footer id="contact" class="site-footer">
+  <div class="container-lg text-center">
+    <h2 class="footer-title">Feel free to reach out!</h2>
+
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:contact@onurarikan.dev">
+        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+        <span>contact@onurarikan.dev</span>
+      </a>
+      <div class="contact-item">
+        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+        <span>Gdynia, Poland</span>
+      </div>
+    </div>
+
+    <!-- Add new socials by copying one <a> line -->
+    <div class="socials">
+      <a class="social-link" href="https://linkedin.com/in/onur93arikan" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a class="social-link" href="https://github.com/opethef10" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+
   </div>
 </footer>
 
