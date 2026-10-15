@@ -1,404 +1,321 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <link rel="icon" type="image/webp" href="profile.webp"/>
   <title>Onur Arıkan</title>
+  <script>
+    // Apply saved or system theme before first paint to avoid a flash
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-bs-theme', t);
+    })();
+  </script>
 </head>
 
-<body class="bg-dark">
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-dark shadow-lg">
+<body>
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
   <div class="container-lg">
-    <a class="navbar-brand fw-bold text-light" href="#">Onur Arıkan</a>
-    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button">
+    <a class="navbar-brand" href="#home">Onur Arıkan</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="navbarNav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link fw-medium text-light" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme"><i class="fas fa-sun"></i></button></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section - Full width and properly spaced -->
-<section id="home" class="hero-section vh-100 d-flex align-items-center bg-dark text-white">
-  <div class="container-fluid">
-    <div class="hero-container-padding container-lg shadow-lg rounded-4 bg-dark bg-gradient">
-      <div class="row align-items-center">
+<!-- Hero -->
+<section id="home" class="hero-section d-flex align-items-center">
+  <div class="container-lg">
+    <div class="row align-items-center g-5">
 
-        <!-- Profile Image -->
-        <div class="col-12 col-lg-4 d-flex justify-content-center mb-3 mb-lg-0">
-          <img class="rounded-4 img-fluid"
-               src="profile.webp"
-               alt="Onur Arıkan"
-               style="width: 250px; height: 250px; object-fit: cover;"
-               class="d-block mx-auto mx-lg-0">
+      <div class="col-12 col-lg-4 d-flex justify-content-center">
+        <div class="portrait">
+          <img src="profile.webp" alt="Onur Arıkan" width="260" height="260">
         </div>
-
-        <!-- Text Content -->
-        <div class="col-12 col-lg-7 text-center text-lg-start">
-          <h1 class="display-5 display-lg-3 fw-black mb-2 mb-lg-3">
-            Hi, I'm <span class="text-primary">Onur Arıkan</span>
-          </h1>
-          <h3 class="mb-3 mb-lg-4 fw-medium fs-5 fs-lg-3">Software Developer</h3>
-          <p class="lead mb-3 mb-lg-4 fs-6 fs-lg-5 mx-auto">
-            I build exceptional and scalable web applications with focus on responsive design, clean
-            code, and user experience.
-          </p>
-
-          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 gap-lg-3">
-            <a class="btn btn-primary btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium rounded-4" role="button" href="#projects">View My Work</a>
-            <a href="https://blog.onurarikan.dev" class="btn btn-outline-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium rounded-4">Check My Blog</a>
-            <a href="https://cv.onurarikan.dev" class="btn btn-outline-light btn-lg px-3 py-2 px-lg-4 py-lg-3 fw-medium rounded-4" target="_blank">See My CV</a>
-          </div>
-        </div>
-
       </div>
+
+      <div class="col-12 col-lg-8 text-center text-lg-start">
+        <h1 class="hero-title">
+          <span class="hero-hi">Hi, I'm</span>
+          Onur Arıkan
+        </h1>
+        <h3 class="hero-role">Software Developer</h3>
+        <p class="hero-lead mx-auto mx-lg-0">
+          I build exceptional and scalable web applications with focus on responsive design, clean
+          code, and user experience.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+          <a class="btn btn-accent" role="button" href="#projects">View My Work</a>
+          <a href="https://blog.onurarikan.dev" class="btn btn-ghost">Check My Blog</a>
+          <a href="https://cv.onurarikan.dev" class="btn btn-ghost" target="_blank">See My CV</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-
-<div class="container-lg mt-5">
-  <section id="about" class="section-padding shadow-inset bg-white rounded-4 mb-5">
-    <div class="container-lg">
-      <div class="row">
-        <div class="col-md-10 mx-auto">
-          <h2 class="text-center fw-bold text-dark mb-4 section-title">About Me</h2>
-          <p class="lead text-center text-muted mb-4">I'm a passionate software developer with 4 years of experience.</p>
-          <p class="text-dark text-justify">Most of the time you'll find me building applications with Python, especially using Django based web
-            applications. I love exploring how different pieces fit together, whether it's a big project with multiple
-            dependencies, or just some small script that makes life easier. Coding is a big part of what I do, but it's
-            only one part of the bigger picture.</p>
-          <p class="text-dark text-justify">Outside of tech, guitar is my biggest passion. I'm always playing, experimenting with sounds, or coming up
-            with new riffs. I also love Formula 1, stargazing, board games hiking, climbing and travelling. This site is my little
-            corner to share all of that — my projects, my hobbies, and the things that make me curious.</p>
-        </div>
+<main class="container-lg">
+  <section id="about" class="panel">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">I'm a passionate software developer with 4 years of experience.</p>
+        <p class="body-copy">Most of the time you'll find me building applications with Python, especially using Django based web
+          applications. I love exploring how different pieces fit together, whether it's a big project with multiple
+          dependencies, or just some small script that makes life easier. Coding is a big part of what I do, but it's
+          only one part of the bigger picture.</p>
+        <p class="body-copy">Outside of tech, guitar is my biggest passion. I'm always playing, experimenting with sounds, or coming up
+          with new riffs. I also love Formula 1, stargazing, board games hiking, climbing and travelling. This site is my little
+          corner to share all of that — my projects, my hobbies, and the things that make me curious.</p>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="section-padding shadow-inset bg-white rounded-4 mb-5">
-    <div class="container-lg">
-      <h2 class="text-center fw-bold text-dark mb-4 section-title">My Skills</h2>
-      <p class="lead text-center text-muted mb-5">I work with a range of technologies and tools to create amazing products.</p>
+  <section id="skills" class="panel">
+    <h2 class="section-title">My Skills</h2>
+    <p class="section-sub">I work with a range of technologies and tools to create amazing products.</p>
 
-      <div class="text-center">
-        <h3 class="mb-4 fw-semibold">Tech Stack</h3>
-        <div class="mb-5">
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-python text-primary me-2 fs-5"></i>
-            <span>Python</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-code text-primary me-2 fs-5"></i>
-            <span>Django</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-bolt text-primary me-2 fs-5"></i>
-            <span>FastAPI</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-flask text-primary me-2 fs-5"></i>
-            <span>Flask</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-database text-primary me-2 fs-5"></i>
-            <span>PostgreSQL</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-database text-primary me-2 fs-5"></i>
-            <span>SQLite</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-html5 text-primary me-2 fs-5"></i>
-            <span>HTML/CSS</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-bootstrap text-primary me-2 fs-5"></i>
-            <span>Bootstrap 5</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-docker text-primary me-2 fs-5"></i>
-            <span>Docker</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-git-alt text-primary me-2 fs-5"></i>
-            <span>Git</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-linux text-primary me-2 fs-5"></i>
-            <span>Linux</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-cogs text-primary me-2 fs-5"></i>
-            <span>C/C++</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fab fa-js-square text-primary me-2 fs-5"></i>
-            <span>JavaScript/TypeScript</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-chart-line text-primary me-2 fs-5"></i>
-            <span>Pandas</span>
-          </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-gamepad text-primary me-2 fs-5"></i>
-            <span>Pygame</span>
-          </div>
-        </div>
+    <h3 class="group-title">Tech Stack</h3>
+    <div class="chips mb-5">
+      <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="skill-item"><i class="fas fa-code"></i><span>Django</span></div>
+      <div class="skill-item"><i class="fas fa-bolt"></i><span>FastAPI</span></div>
+      <div class="skill-item"><i class="fas fa-flask"></i><span>Flask</span></div>
+      <div class="skill-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+      <div class="skill-item"><i class="fas fa-database"></i><span>SQLite</span></div>
+      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML/CSS</span></div>
+      <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap 5</span></div>
+      <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+      <div class="skill-item"><i class="fab fa-linux"></i><span>Linux</span></div>
+      <div class="skill-item"><i class="fas fa-cogs"></i><span>C/C++</span></div>
+      <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript/TypeScript</span></div>
+      <div class="skill-item"><i class="fas fa-chart-line"></i><span>Pandas</span></div>
+      <div class="skill-item"><i class="fas fa-gamepad"></i><span>Pygame</span></div>
+    </div>
 
-        <h3 class="mb-4 fw-semibold">Other Interests</h3>
-        <div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-guitar text-primary me-2 fs-5"></i>
-            <span>Guitar</span>
+    <h3 class="group-title">Other Interests</h3>
+    <div class="chips">
+      <div class="skill-item alt"><i class="fas fa-guitar"></i><span>Guitar</span></div>
+      <div class="skill-item alt"><i class="fas fa-flag-checkered"></i><span>Formula 1</span></div>
+      <div class="skill-item alt"><i class="fas fa-hiking"></i><span>Hiking</span></div>
+      <div class="skill-item alt"><i class="fas fa-mountain"></i><span>Climbing</span></div>
+      <div class="skill-item alt"><i class="fas fa-star"></i><span>Astronomy</span></div>
+      <div class="skill-item alt"><i class="fas fa-chess"></i><span>Board Games</span></div>
+      <div class="skill-item alt"><i class="fas fa-globe-americas"></i><span>Travelling</span></div>
+    </div>
+  </section>
+
+  <section id="projects" class="panel">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-sub">Here are some of my recent works that I'm proud of.</p>
+
+    <div class="row g-4">
+      <!-- Formula 1 Fantasy League -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/verif1_banner.webp" alt="VeriF1"/></div>
+          <div class="card-body">
+            <h5 class="card-title">VeriF1</h5>
+            <p class="tech-stack">Python, Django, Bootstrap 5, SQLite3</p>
+            <p class="card-text">Homepage for the biggest F1 community in Turkey. Contains all the historical
+              F1 data, graphs and statistics. Features an online fantasy league and prediction game
+              which requires budget management and strategy skills, first and only one in Turkey, played by hundreds of people.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://verif1.app">View Site</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-flag-checkered text-primary me-2 fs-5"></i>
-            <span>Formula 1</span>
+        </article>
+      </div>
+
+      <!-- Blog Card -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/blogheader.webp" alt="Coding Blog"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Coding Blog</h5>
+            <p class="tech-stack">Jekyll, GitHub Pages, Markdown</p>
+            <p class="card-text">In this web page, I share my personal journey in Computer Science as well
+              as the handy tips that make my life easier while using the web, command line applications
+              or generally everything that I can explore in my computer.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://blog.onurarikan.dev">Visit Blog</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/opethef10.github.io">GitHub</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-hiking text-primary me-2 fs-5"></i>
-            <span>Hiking</span>
+        </article>
+      </div>
+
+      <!-- Splendid -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/splendid.webp" alt="Splendid Board Game"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Splendid</h5>
+            <p class="tech-stack">Python, Django, Channels, WebSockets, PostgreSQL</p>
+            <p class="card-text">Intelligent design system for the board game Splendor, a web application that
+              can be played as multiplayer or against AI in real time with robust authentication and Elo rating
+              system.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://splendid.onurarikan.dev">View Project</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-mountain text-primary me-2 fs-5"></i>
-            <span>Climbing</span>
+        </article>
+      </div>
+
+      <!-- Flagsweeper -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="https://github.com/opethef10/Flagsweeper/raw/main/resources/screenshot.png" alt="Flagsweeper Game"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Flagsweeper</h5>
+            <p class="tech-stack">PyGame, Python, Multiplayer Gaming</p>
+            <p class="card-text">Multiplayer version of the classic Minesweeper game, written in PyGame with
+              enhanced gameplay features and real-time multiplayer functionality.</p>
+            <div class="card-actions">
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/Flagsweeper">GitHub</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-star text-primary me-2 fs-5"></i>
-            <span>Astronomy</span>
+        </article>
+      </div>
+
+      <!-- Solar System Plotter -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/solar.webp" alt="Solar System Plotter"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Solar System Plotter</h5>
+            <p class="tech-stack">Python, Flask, PyEphem, Animation</p>
+            <p class="card-text">A web app that plots the solar system with given parameters, in
+              heliocentric or geocentric view with an option to generate animated GIFs showing planetary movements
+              over time.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://solar.onurarikan.dev">View Project</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/solar_system_plotter">GitHub</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-chess text-primary me-2 fs-5"></i>
-            <span>Board Games</span>
+        </article>
+      </div>
+
+      <!-- Syllabify-Turkish -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/syllabify.webp" alt="Syllabify Turkish"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Syllabify-Turkish</h5>
+            <p class="tech-stack">JavaScript, Linguistics, Turkish Language Processing</p>
+            <p class="card-text">A JavaScript program that divides Turkish sentences into their syllables, useful
+              for linguistic analysis and language learning applications.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://syllabify.onurarikan.dev">View Project</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/Syllabify-Turkish">GitHub</a>
+            </div>
           </div>
-          <div class="skill-item d-inline-flex align-items-center m-2 p-3 bg-white rounded-pill shadow">
-            <i class="fas fa-globe-americas text-primary me-2 fs-5"></i>
-            <span>Travelling</span>
+        </article>
+      </div>
+
+      <!-- Habit Tracker -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/habits.webp" alt="Habit Tracker"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Habit Tracker</h5>
+            <p class="tech-stack">Python, Data Visualization, Productivity</p>
+            <p class="card-text">A simple habit tracker that helps users track their habits and visualize progress
+              over time with intuitive charts and statistics.</p>
+            <div class="card-actions">
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/habit_tracker">GitHub</a>
+            </div>
           </div>
-        </div>
+        </article>
+      </div>
+
+      <!-- formula1_elo -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/f1_elo.webp" alt="Formula 1 Elo"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Formula 1 Elo Rankings</h5>
+            <p class="tech-stack">Python, Elo Rating System, Data Analysis</p>
+            <p class="card-text">Ranks Formula 1 drivers using the Elo scoring system to objectively determine the
+              fastest drivers based on race performance.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://verif1.app/pages/elo/#en">View Project</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Elo Rating Calculator -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card card h-100">
+          <div class="project-media"><img class="project-img" src="/img/elo.webp" alt="Elo Rating Calculator"/></div>
+          <div class="card-body">
+            <h5 class="card-title">Elo Rating Calculator</h5>
+            <p class="tech-stack">JavaScript, Elo Algorithm, Rating System</p>
+            <p class="card-text">Calculates Elo rating adjustments for two players based on their current ratings
+              and match outcomes, with customizable parameters.</p>
+            <div class="card-actions">
+              <a class="btn btn-accent btn-sm" href="https://elo.onurarikan.dev">View Project</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/opethef10/elo_calculator/">GitHub</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section-padding shadow-inset bg-white rounded-4 mb-5">
-    <div class="container-lg">
-      <h2 class="text-center fw-bold text-dark mb-4 section-title">My Projects</h2>
-      <p class="lead text-center text-muted mb-5">Here are some of my recent works that I'm proud of.</p>
-
-          <!-- Slide 1 -->
-            <div class="row justify-content-center px-3">
-              <!-- Formula 1 Fantasy League -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/verif1_banner.webp"
-                       alt="Veri F1"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Veri F1</h5>
-                    <p class="tech-stack text-muted small"><small>Python, Django, Bootstrap 5, SQLite3</small></p>
-                    <p class="card-text text-justify">Homepage for the biggest F1 community in Turkey. Contains all the historical
-                      F1 data, graphs and statistics. Features an online fantasy league and prediction game
-                      which requires budget management and strategy skills, first and only one in Turkey, played by hundreds of people.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://verif1.app">View Site</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Blog Card -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/blogheader.webp"
-                       alt="Coding Blog"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Coding Blog</h5>
-                    <p class="tech-stack text-muted small"><small>Jekyll, GitHub Pages, Markdown</small></p>
-                    <p class="card-text text-justify">In this web page, I share my personal journey in Computer Science as well
-                      as the handy tips that make my life easier while using the web, command line applications
-                      or generally everything that I can explore in my computer.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://blog.onurarikan.dev">Visit Blog</a>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill"
-                       href="https://github.com/opethef10/opethef10.github.io">GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Splendid -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/splendid.webp"
-                       alt="Splendid Board Game"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Splendid</h5>
-                    <p class="tech-stack text-muted small"><small>Python, Django, Channels, WebSockets, PostgreSQL</small></p>
-                    <p class="card-text text-justify">Intelligent design system for the board game Splendor, a web application that
-                      can be played as multiplayer or against AI in real time with robust authentication and Elo rating
-                      system.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://splendid.onurarikan.dev">View Project</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <!-- Slide 2 -->
-            <div class="row justify-content-center px-3">
-              <!-- Flagsweeper -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="https://github.com/opethef10/Flagsweeper/raw/main/resources/screenshot.png"
-                       alt="Flagsweeper Game"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Flagsweeper</h5>
-                    <p class="tech-stack text-muted small"><small>PyGame, Python, Multiplayer Gaming</small></p>
-                    <p class="card-text text-justify">Multiplayer version of the classic Minesweeper game, written in PyGame with
-                      enhanced gameplay features and real-time multiplayer functionality.</p>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/Flagsweeper">GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Solar System Plotter -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/solar.webp"
-                       alt="Solar System Plotter"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Solar System Plotter</h5>
-                    <p class="tech-stack text-muted small"><small>Python, Flask, PyEphem, Animation</small></p>
-                    <p class="card-text text-justify">A web app that plots the solar system with given parameters, in
-                      heliocentric or geocentric view with an option to generate animated GIFs showing planetary movements
-                      over time.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://solar.onurarikan.dev">View Project</a>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/solar_system_plotter">GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Syllabify-Turkish -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/syllabify.webp"
-                       alt="Syllabify Turkish"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Syllabify-Turkish</h5>
-                    <p class="tech-stack text-muted small"><small>JavaScript, Linguistics, Turkish Language Processing</small></p>
-                    <p class="card-text text-justify">A JavaScript program that divides Turkish sentences into their syllables, useful
-                      for linguistic analysis and language learning applications.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://syllabify.onurarikan.dev">View Project</a>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/Syllabify-Turkish">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <!-- Slide 3 -->
-            <div class="row justify-content-center px-3">
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/habits.webp"
-                       alt="Habit Tracker"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Habit Tracker</h5>
-                    <p class="tech-stack text-muted small"><small>Python, Data Visualization, Productivity</small></p>
-                    <p class="card-text text-justify">A simple habit tracker that helps users track their habits and visualize progress
-                      over time with intuitive charts and statistics.</p>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill"
-                       href="https://github.com/opethef10/habit_tracker">GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- formula1_elo -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/f1_elo.webp"
-                       alt="Formula 1 Elo"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Formula 1 Elo Rankings</h5>
-                    <p class="tech-stack text-muted small"><small>Python, Elo Rating System, Data Analysis</small></p>
-                    <p class="card-text text-justify">Ranks Formula 1 drivers using the Elo scoring system to objectively determine the
-                      fastest drivers based on race performance.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://verif1.app/pages/elo/#en">View
-                      Project</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Elo Rating Calculator -->
-              <div class="col-sm-4 mb-4">
-                <div class="project-card card h-100 border-0 rounded-4 shadow">
-                  <img class="project-img card-img-top"
-                       src="/img/elo.webp"
-                       alt="Elo Rating Calculator"/>
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold text-dark">Elo Rating Calculator</h5>
-                    <p class="tech-stack text-muted small"><small>JavaScript, Elo Algorithm, Rating System</small></p>
-                    <p class="card-text text-justify">Calculates Elo rating adjustments for two players based on their current ratings
-                      and match outcomes, with customizable parameters.</p>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill" href="https://elo.onurarikan.dev">View Project</a>
-                    <a class="btn btn-outline-secondary btn-sm rounded-pill" href="https://github.com/opethef10/elo_calculator/">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section-padding shadow-inset bg-white rounded-4 mb-5">
-    <div class="container-lg">
-      <h2 class="text-center fw-bold text-dark mb-4 section-title">Get In Touch</h2>
-      <p class="lead text-center text-muted mb-5">Feel free to reach out!</p>
-      <div class="row mt-5">
-        <div class="col-sm-4 text-center">
-          <div class="mb-3 mx-auto d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 40px; height: 40px;">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h5 class="fw-semibold">Email</h5>
-          <p class="text-muted">contact@onurarikan.dev</p>
+  <section id="contact" class="panel">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Feel free to reach out!</p>
+    <div class="row g-4 align-items-start">
+      <div class="col-sm-4 text-center">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <h5>Email</h5>
+        <p class="contact-text">contact@onurarikan.dev</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="d-flex justify-content-center gap-3">
+          <a class="contact-icon social-icon" href="https://linkedin.com/in/onur93arikan" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="contact-icon social-icon" href="https://github.com/opethef10" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
-        <div class="col-sm-4 mb-3 text-center">
-        <a class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle text-decoration-none me-3 social-icon"
-           href="https://linkedin.com/in/onur93arikan" style="width: 40px; height: 40px;">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle text-decoration-none social-icon"
-           href="https://github.com/opethef10" style="width: 40px; height: 40px;">
-          <i class="fab fa-github"></i>
-        </a>
-        </div>
-        <div class="col-sm-4 text-center">
-          <div class="mb-3 mx-auto d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 40px; height: 40px;">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h5 class="fw-semibold">Location</h5>
-          <p class="text-muted">Gdynia, Poland</p>
-        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h5>Location</h5>
+        <p class="contact-text">Gdynia, Poland</p>
       </div>
     </div>
   </section>
-</div>
+</main>
 
-<footer class="text-center bg-dark text-white pb-5">
+<footer class="site-footer text-center">
   <div class="container-lg">
     <p class="mb-0">2026 Onur Arıkan</p>
   </div>
@@ -407,5 +324,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
